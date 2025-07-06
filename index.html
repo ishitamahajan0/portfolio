@@ -4,32 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ishita Mahajan | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #f8f9fa, #e8f0fe);
       color: #333;
     }
     header {
-      background: #ffffffcc;
-      backdrop-filter: blur(10px);
+      background: #fff;
       padding: 1rem 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     nav a {
-      margin-left: 20px;
+      margin-left: 1rem;
       text-decoration: none;
       color: #007BFF;
       font-weight: 600;
@@ -41,13 +34,16 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      animation: fadeIn 1s ease-in-out;
     }
-    .highlight {
-      color: #007BFF;
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero h2 {
+      font-size: 1.5rem;
+      color: #555;
     }
     .typing {
       color: #007BFF;
@@ -59,10 +55,6 @@
     }
     @keyframes blink-caret {
       50% { border-color: transparent; }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     section {
       padding: 60px 20px;
@@ -82,60 +74,57 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Ishita Mahajan</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <h1>Ishita Mahajan</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section class="hero">
-    <h2>Hello, I'm <span class="highlight">Ishita</span></h2>
-    <h3>I’m a <span class="typing" id="typing"></span></h3>
+    <h1>Hello, I'm Ishita Mahajan</h1>
+    <h2>I’m a <span class="typing" id="typing"></span></h2>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a 3rd-year Computer Science student at Guru Nanak Dev University with a CGPA of 8.59. Currently interning at Tales by Dora as a Web Designer, I specialize in building responsive, elegant, and user-friendly web interfaces. I'm also certified in AI, Cloud, and Cybersecurity with a strong command over Python, JavaScript, and full-stack development.</p>
+    <p>I'm a 3rd-year Computer Science student at GNDU with a CGPA of 8.59. I'm currently interning as a Web Designer at Tales by Dora. I specialize in full-stack development and have certifications in AI, Cloud, and Cybersecurity.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <h3>SkyCast – Weather App</h3>
-      <p>Real-time weather app with dynamic animated backgrounds, city input, and responsive UI.</p>
+      <p>Weather app using API, user city input, and animated background.</p>
     </div>
     <div class="project">
       <h3>BlogSphere</h3>
-      <p>Blog system built using Flask with login authentication and CRUD operations.</p>
+      <p>Blog app built with Flask supporting authentication and CRUD operations.</p>
     </div>
     <div class="project">
       <h3>Amazon Clone</h3>
-      <p>Front-end replica of Amazon’s homepage using HTML, CSS, JavaScript.</p>
+      <p>Front-end Amazon replica using HTML, CSS, JS.</p>
     </div>
     <div class="project">
       <h3>To-Do App</h3>
-      <p>Local storage task tracker to add, update and delete daily tasks efficiently.</p>
+      <p>Task manager with local storage functionality.</p>
     </div>
     <div class="project">
       <h3>Portfolio Website</h3>
-      <p>Responsive personal portfolio hosted on GitHub Pages showcasing my skills and work.</p>
+      <p>This portfolio showcasing my skills and work.</p>
     </div>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>Languages: Python, JavaScript, C++</li>
-      <li>Web: HTML, CSS, JavaScript, Bootstrap</li>
-      <li>Frameworks: Flask, Django</li>
-      <li>Database: MySQL, MongoDB</li>
-      <li>Tools: Git, GitHub, VS Code, Postman</li>
-      <li>Cloud: AWS, Azure (Basics)</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Python, Flask, Django</li>
+      <li>MySQL, MongoDB</li>
+      <li>Git, GitHub</li>
+      <li>Cloud: AWS, Azure</li>
     </ul>
   </section>
 
