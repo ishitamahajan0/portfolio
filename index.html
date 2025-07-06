@@ -8,11 +8,12 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e8f0fe);
-      color: #333;
+      background: url('https://images.unsplash.com/photo-1528459105426-bd6b5b7f772b?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #4a2f43;
     }
     header {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.85);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -24,7 +25,7 @@
     nav a {
       margin-left: 1rem;
       text-decoration: none;
-      color: #007BFF;
+      color: #bb4e9c;
       font-weight: 600;
     }
     nav a:hover {
@@ -37,18 +38,21 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(4px);
     }
     .hero h1 {
       font-size: 3rem;
+      color: #b02e85;
     }
     .hero h2 {
       font-size: 1.5rem;
-      color: #555;
+      color: #6b3e75;
     }
     .typing {
-      color: #007BFF;
+      color: #d81b60;
       font-weight: bold;
-      border-right: 2px solid #007BFF;
+      border-right: 2px solid #d81b60;
       white-space: nowrap;
       overflow: hidden;
       animation: blink-caret 0.75s step-end infinite;
@@ -60,6 +64,10 @@
       padding: 60px 20px;
       max-width: 900px;
       margin: auto;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 12px;
+      margin-bottom: 40px;
     }
     .project, ul li {
       margin-bottom: 20px;
@@ -67,7 +75,7 @@
     footer {
       text-align: center;
       padding: 20px;
-      background: #f1f1f1;
+      background: #fce4ec;
       font-size: 0.9rem;
     }
   </style>
@@ -79,6 +87,7 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -125,6 +134,17 @@
       <li>MySQL, MongoDB</li>
       <li>Git, GitHub</li>
       <li>Cloud: AWS, Azure</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Artificial Intelligence – Simplilearn (July 2025)</li>
+      <li>Google Cloud Operations – Simplilearn (July 2025)</li>
+      <li>Microsoft Certified: Azure Fundamentals – Simplilearn (July 2025)</li>
+      <li>AI Fundamentals – Simplilearn (June 2025)</li>
+      <li>Introduction to Cybersecurity – HP Life</li>
     </ul>
   </section>
 
