@@ -24,8 +24,9 @@
     header {
       background: linear-gradient(135deg, #667eea, #764ba2);
       color: #fff;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
@@ -34,10 +35,29 @@
       animation: fadeIn 1s ease-in;
     }
 
-    header p {
-      font-size: 1.3em;
-      margin-top: 10px;
-      animation: fadeIn 1.5s ease-in;
+    .typed-text {
+      font-size: 1.5em;
+      margin-top: 15px;
+      height: 40px;
+      font-weight: 500;
+      color: #ffefcf;
+    }
+
+    .buttons a {
+      display: inline-block;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: #fff;
+      padding: 14px 30px;
+      margin: 20px 10px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .buttons a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     nav {
@@ -108,23 +128,6 @@
       transform: scale(1.05);
     }
 
-    .buttons a {
-      display: inline-block;
-      background: linear-gradient(to right, #667eea, #764ba2);
-      color: #fff;
-      padding: 14px 30px;
-      margin: 15px 10px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .buttons a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
     .project {
       background: #fff;
       padding: 20px;
@@ -181,6 +184,10 @@
         font-size: 2.5em;
       }
 
+      .typed-text {
+        font-size: 1.2em;
+      }
+
       .buttons a {
         padding: 12px 24px;
         font-size: 0.9em;
@@ -197,7 +204,7 @@
 <body>
   <header>
     <h1>Ishita</h1>
-    <p>Full Stack Developer | Creative Coder</p>
+    <div class="typed-text" id="typing"></div>
     <div class="buttons">
       <a href="#projects">View Projects</a>
       <a href="#contact">Contact Me</a>
@@ -213,7 +220,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm Ishita, an aspiring full stack developer driven by curiosity and creativity. My journey in the tech world began with a fascination for problem-solving and evolved into a passion for building efficient and elegant digital solutions. With a strong command over Python, I blend logic and design to create seamless user experiences across the stack. I am constantly learning and seeking new technologies to grow as a developer and contribute to impactful and innovative projects.</p>
+    <p>Hello! I'm Ishita, an aspiring full stack developer with a strong foundation in both frontend and backend technologies. I blend design and logic to craft seamless digital experiences. I've completed an internship as a Web Designer at <strong>Tales by Dora</strong>, and continuously enhance my skills through certifications in AI, Cloud (AWS, Azure, Google), and Cybersecurity.</p>
   </section>
 
   <section id="skills">
@@ -231,14 +238,17 @@
       <h3>Backend</h3>
       <ul class="skills">
         <li>Python</li>
-        <li>Django(learning)</li>
+        <li>Django</li>
+        <li>Flask</li>
       </ul>
     </div>
     <div class="skill-category">
-      <h3>Database & Tools</h3>
+      <h3>Cloud & Tools</h3>
       <ul class="skills">
+        <li>Azure Fundamentals</li>
+        <li>Google Cloud Ops</li>
         <li>VS Code</li>
-         <li>Font Awesome</li>
+        <li>GitHub</li>
       </ul>
     </div>
   </section>
@@ -248,25 +258,32 @@
 
     <div class="project">
       <h3>Portfolio Website</h3>
-      <p>A personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
+      <p>My personal portfolio showcasing skills, projects, and resume. Built with HTML, CSS, and JavaScript.</p>
       <a href="#">View Code</a>
     </div>
 
     <div class="project">
-      <h3>Task Manager</h3>
-      <p>A simple to-do web app that allows users to add, mark as complete, and delete tasks, with data stored in local storage.</p>
+      <h3>Amazon Frontend Clone</h3>
+      <p>A static replica of Amazon's homepage using clean HTML and CSS for layout and design replication.</p>
       <a href="#">View Code</a>
     </div>
+
     <div class="project">
-      <h3>amazon frontend clone</h3>
-      <p>Developed a static clone of the Amazon homepage using HTML and CSS.</p>
+      <h3>Task Manager (To-Do App)</h3>
+      <p>A productivity web app for managing daily tasks, with local storage-based persistence.</p>
+      <a href="#">View Code</a>
+    </div>
+
+    <div class="project">
+      <h3>SkyCast Weather App</h3>
+      <p>Dynamic weather app using real-time API integration. User can input a city and get live weather data.</p>
       <a href="#">View Code</a>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Interested in working together, Let's connect!</p>
+    <p>Want to collaborate or have a project in mind?</p>
     <p>Email: <a href="mailto:ishumahajan43@gmail.com">ishumahajan43@gmail.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/ishitamahajan04" target="_blank">linkedin.com/in/ishitamahajan04</a></p>
   </section>
@@ -274,5 +291,20 @@
   <footer>
     <p>&copy; 2025 Ishita. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for dynamic text -->
+  <script>
+    const roles = ["a Developer", "a Full Stack Developer", "a Python Developer", "a Cloud Enthusiast"];
+    let i = 0;
+    const typing = document.getElementById("typing");
+
+    function typeRole() {
+      typing.textContent = "I am " + roles[i];
+      i = (i + 1) % roles.length;
+    }
+
+    typeRole(); // Initial call
+    setInterval(typeRole, 2000); // Change every 2 seconds
+  </script>
 </body>
 </html>
